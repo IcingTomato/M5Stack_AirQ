@@ -1,0 +1,49 @@
+#include <WiFi.h>
+
+const char* ssid      = "M5-R&D";
+const char* password  = "echo\"password\">/dev/null";
+
+int powerButton_Hold = 7;
+int powerButton_Wake = 6;
+
+void powerSetup();
+
+void setup()
+{
+    Serial.begin(115200);
+    powerSetup();
+    delay(1000);
+    WiFi.begin(ssid, password);
+    Serial.println("\nConnecting");
+
+    while(WiFi.status() != WL_CONNECTED){
+        Serial.print(".");
+        delay(100);
+    }
+
+    Serial.println("\nConnected to the WiFi network");
+    Serial.print("Local ESP32 IP: ");
+    Serial.println(WiFi.localIP());
+}
+
+void loop()
+{
+
+}
+
+void powerSetup()
+{
+    pinMode(powerButton_Hold, OUTPUT);
+    pinMode(powerButton_Wake, INPUT_PULLUP);
+    digitalWrite(powerButton_Hold, HIGH);
+    delay(100);
+    if (digitalRead(powerButton_Wake) == LOW)
+    {
+        Serial.println("Power is on");
+        digitalWrite(powerButton_Hold, LOW);
+        while (digitalRead(powerButton_Wake) == LOW)
+        {
+            delay(100);
+        }
+    }
+}
