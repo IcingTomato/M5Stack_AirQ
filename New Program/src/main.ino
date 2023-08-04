@@ -1,14 +1,13 @@
 /**
  * @file main.ino
  * @author IcingTomato (icing@m5stack.com)
- * @brief 
+ * @brief The honour & halo of a embeded software engineer.
  * @version 0.1
  * @date 2023-08-04
  * 
  * @copyright Copyright (c) 2023
  * 
  */
-
 #include <Arduino.h>
 #include <Wire.h>
 #include "shit.h"

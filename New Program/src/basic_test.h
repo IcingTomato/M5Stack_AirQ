@@ -1,3 +1,13 @@
+/**
+ * @file basic_test.h
+ * @author IcingTomato (icing@m5stack.com)
+ * @brief The honour & halo of a embeded software engineer.
+ * @version 0.1
+ * @date 2023-08-04
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
 #include <Arduino.h>
 #include <Wire.h>
 
