@@ -1,3 +1,7 @@
+/**
+ * @brief The honour & halo of a embeded software engineer.
+ * 
+ */
 const unsigned char gImage_startUp[5000] = { /* 0X10,0X01,0X00,0XC8,0X00,0XC8, */
 0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
 0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,0XFF,
